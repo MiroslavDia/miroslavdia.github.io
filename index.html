@@ -1,15 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Слава Украине</title>
-    <meta charset='UTF-8'></meta>
-  </head>
-  <body
-    <div>
-        <center>Игры:</center>
-            <a href=/balloons>Шарики</a>
-            <a href=/mineSweeper>Сапер</a>
-            <a href=/snake>Змейка</a>
-	<a href=/snow>Снег</a>
-  </body>
+	<head>
+		<title>Слава Украине</title>
+		<meta charset='UTF-8'></meta>
+		<style>
+		#body {
+			background: #1c1a1a;
+		}
+		#balloons {
+			height: 48px;
+			width: 48px;
+			transform: translate(4px, 0px);
+		}
+		#minesweeper {
+			height: 37px;
+			width: 37px;
+			transform: translate(10px, 0px);
+		}
+		#snake {
+			height: 42px;
+			width: 42px;
+			transform: translate(14px, 0px);
+		}
+		#snow {
+			height: 48px;
+			width: 48px;
+			transform: translate(9px, 0px);
+		}
+		#textbox {
+			width: 12%;
+			border: solid #2e2a2a 12px;
+			background: #2e2a2a;
+		}
+		#gamebox {
+			width: 90%;
+			height: 75%;
+			border: solid #2e3c3c 8px;
+			background: #2e2a2a;
+			transform: translate(-4px, 0px);
+			size: 50%
+		}
+		#text.balloons {
+			size: 2%;
+		}
+		#games {
+			background: #2e2c2c;
+			color: #ffffff;
+		}
+		</style>
+		<script>
+		function onButton(element) {
+			console.log('Button clicked: ' + element.id);
+		}
+		</script>
+	</head>
+	<body id="body">
+		<!--<button id="refresh" onclick="onButton(document.getElementById('refresh'))">Обновить страницу</button>-->
+		<br/>
+		<center>
+		<div id="textbox">
+		<text id="games">Игры</text>
+		<br/>
+		<br/>
+			<div id="gamebox">
+				<img src="balloons.png" id="balloons"> </img>
+				<img src="minesweeper.png" id="minesweeper"> </img>
+				<img src="snake.png" id="snake"> </img>
+				<img src="snow.png" id="snow"> </img>
+				<br/>
+				<a id="text.balloons" href="/balloons">Шарики</a>
+				<a id="text.minesweeper" href="/mineSweeper">Сапер</a>
+				<a id="text.snake" href="/snake">Змейка</a>
+				<a id="text.snow" href="/snow">Снег</a>
+			</div>
+		</div>
+		</center>
+	</body>
 </html>
