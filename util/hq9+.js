@@ -15,8 +15,7 @@ class Runner {
 	constructor() {
 		this.counter = 0;
 	}
-	eval(str) {
-		document.getElementById('out').value = '';
+	eval(str, line='<in>') {
 		if(str === '') return;
 		for(let chi=0;chi<str.length;chi++) {
 			let ch = str.substring(chi, chi+1);
@@ -35,7 +34,7 @@ class Runner {
 			} else if(ch == '+') this.counter++;
 			else {
 				dwriteln('HQSyntaxException: {0}', [ch]);
-				dwriteln('\tat <in>({0}:<in>)', [chi]);
+				dwriteln('\tat <in>({0}:{1})', [line, chi]);
 			}
 		}
 	}
@@ -45,8 +44,9 @@ var runner = new Runner();
 function run() {
 	let val = document.getElementById('in').value;
 	let arr = val.split('\n');
+	document.getElementById('out').value = '';
 	for(let elem in arr) {
-		runner.eval(arr[elem]);
+		runner.eval(arr[elem], elem);
 	}
 }
 window.onload = ()=>{
