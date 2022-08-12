@@ -39,7 +39,6 @@ class Runner {
 		}
 	}
 }
-
 var runner = new Runner();
 function run() {
 	let val = document.getElementById('in').value;
