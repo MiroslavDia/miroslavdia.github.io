@@ -4,7 +4,7 @@ window.onload = ()=>{
 	document.getElementById('result').innerHTML = rnd(25, 500);
 };
 function rnd(min, max) {
-	return Math.round((Math.random() * (max - min) + min));
+	return (Math.floor(Math.random() * (max - min + 1) + min)) % max;
 }
 function gen() {
 	var min = document.getElementById('min').value;
