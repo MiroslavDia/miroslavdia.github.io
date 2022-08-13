@@ -29,9 +29,11 @@
 		<text id="group">Г</text>
 		<text id="users">П</text>
 		<br/>
-		R <input oninput="update();" type="checkbox" id="or"></input><input oninput="update();" type="checkbox" id="gr"></input><input oninput="update();" type="checkbox" id="ur"></input><br/>
-		W<input oninput="update();" type="checkbox" id="ow"></input><input oninput="update();" type="checkbox" id="gw"></input><input oninput="update();" type="checkbox" id="uw"></input><br/>
-		X <input oninput="update();" type="checkbox" id="ox"></input><input oninput="update();" type="checkbox" id="gx"></input><input oninput="update();" type="checkbox" id="ux"></input><br/>
+		<div id="permsbox" oninput="update();">
+			R <input type="checkbox" id="or"></input><input type="checkbox" id="gr"></input><input type="checkbox" id="ur"></input><br/>
+			W<input type="checkbox" id="ow"></input><input type="checkbox" id="gw"></input><input type="checkbox" id="uw"></input><br/>
+			X <input type="checkbox" id="ox"></input><input type="checkbox" id="gx"></input><input type="checkbox" id="ux"></input><br/>
+		</div>
 		<br/>
 		Вывод: <br/>
 		В цифровом виде: <text id="num">???</text><br/>
