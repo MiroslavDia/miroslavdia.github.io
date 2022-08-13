@@ -1,3 +1,6 @@
+function about() {
+	
+}
 function __clear__() {
 	document.getElementById('out').value = '';
 	document.getElementById('out').rows = 2;
